@@ -1,4 +1,4 @@
-/* Reset and basic styling */
+/* HEADER*/
 * {
     margin: 0;
     padding: 0;
@@ -60,3 +60,45 @@ body {
 .buy-button:hover {
     background-color: #5CA23A;
 }
+
+/* CONTENEDOR DIVERSION*/
+.container-mas-diversion {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+  
+  .left-column {
+    position: sticky;
+    top: 20px;
+    width: 40%; /* Ajusta el ancho de la columna de la imagen */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-column {
+    width: 60%; /* Ajusta el ancho de la columna de texto */
+    padding-left: 20px;
+    margin-top: 300px; /* Ajusta este valor según sea necesario */
+    
+  }
+  
+  .changing-image {
+    max-width: 60%; /* Asegura que la imagen no exceda el ancho de la columna */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(1.05);
+  }
+  
+  .changing-image.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .text-block {
+    margin-bottom: 200px; /* Espacio entre bloques de texto */
+  }
+  
