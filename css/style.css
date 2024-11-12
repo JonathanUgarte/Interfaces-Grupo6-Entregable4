@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.number-block-main-container{
+    display: flex;
+    width: 1279px;
+    height: 959px;
+    background-image: url("../imagenes/ff.png");
+}
+.arbol-derecha{
+    z-index: 2; /* Asegura que el árbol esté por delante del arbusto */
+}
+
+.arboles-piedras-1{
+    display: block;
+    flex-direction: column;
+}
+
+.right{
+    display: flex;
+}
+
+
+  .rock1 {
+    left: 150px;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px
+  }
+
+
+
+  /* Arbustos */
+  .bush1, .bush2 {
+    position: absolute;
+
+  }
+
+  .bush1 {
+    bottom: 70px;
+    left: 190px;
+  }
+
+  .bush2 {
+    left: 220px;
+    bottom: 1px;
+    z-index: 2;
+  }
+  .center {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulo{
+    width: 560px;
+    height: 320px;
+  }
+  .personajes {
+    display: flex;
+}
+
+.personaje1 {
+    z-index: 2;
+}
+
+.personaje2{
+   
+}
+
+
+
+
+
+
+
