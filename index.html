@@ -18,27 +18,7 @@
         <button class="buy-button">COMPRAR</button>
     </div>
 </header>
-    <section class="number-blocks-main">
-            <div class="number-block-main-container">
-                    <div class="right">
-                        <img class="arbol-derecha" src="./imagenes/Arbol1.png" alt="arbol-derecha">
-                            <div class="arboles-piedras-1">
-                                <img class="bush1" src="./imagenes/Vector.svg" alt="">
-                                <img class="rock1" src="./imagenes/Vector (5).svg" alt="">
-                                <img class="bush2" src="./imagenes/Vector (1).svg" alt="">
-                            </div>
-                    </div>
-                    <div class="center">
-                        <div class="titulo">
-                            <img src="./imagenes/logo 1.svg" alt="">
-                        </div>
-                        <div class="personajes">
-                            <img  class="personaje1" src="./imagenes/11.svg" alt="">
-                            <img   class="personaje2" src="./imagenes/22.svg" alt="">
-                            <img  class="personaje3" src="./imagenes/33.svg" alt="">                 
-                    </div>
-            </div>
-    </section>
+
     <section class="numberblocks-section">
       <div class="background">
         <div class="purple-background"></div>
@@ -113,8 +93,32 @@
           </div>
         </div>
       </div>
-      <script src="./js/mas-diversion.js"></script>
-      <script src="./js/number-blocks.js"></script>
-      <script src="./js/header.js"></script>
+      <div class="container-numberblock-corona">
+        <div class="rectangulo-numberblock-corona"></div>
+        <div class="grupo-numberblock-corona">
+            <img class="imagen-numberblock-corona" src="./imagenes/video-numerblock-corona.png" />
+        </div>
+        <img class="numberblocks-numero3-con-corona1" src="./imagenes/numberblock-3-corona.png" />
+        <div class="texto-numberblock-corona">Mira el video y descubre el sorprendente mundo de los NumberBlocks!</div>
+    </div>
+   
+    <section id="section-3d">
+      <model-viewer id="character-3d-placeholder" src="models/one.glb" alt="A 3D model" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+      <div class="container">
+          <h2 id="title-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura Matemática Inmersiva!</h2>
+          <p id="description-3d">En NumberBlocks, la aventura no solo está en el aprendizaje, ¡sino también en la
+              experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a cada número y desafío, haciendo que
+              las matemáticas cobren una nueva dimensión. A medida que los niños interactúan con los personajes y los
+              bloques, verán cómo sus acciones tienen un impacto real en el entorno, creando un aprendizaje dinámico y
+              emocionante. ¡Cada sesión de juego se convierte en una experiencia inolvidable llena de color y
+              diversión!</p>
+      </div>
+  </section>
+  
+    <script src="./js/animado3d.js"></script>
+    <script src="./js/mas-diversion.js"></script>
+    <script src="./js/number-blocks.js"></script>
+    <script src="./js/header.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0"></script>
 </body>
 </html>
