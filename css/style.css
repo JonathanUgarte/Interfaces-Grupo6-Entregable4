@@ -1,7 +1,101 @@
 
 
 
-/* ------------- SECCION 7 ------------*/
+
+/*--------------------------------HEADER ------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    max-width: 1280px;
+    height: 103px;
+    background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 88%, rgba(1, 208, 213, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.icon-container, .logo-container, .button-comprar-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: margin 0.3s ease;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.buy-button {
+    width: 200px;
+    height: 50px;
+    background: #83C252;
+    box-shadow: 4px 5px 0px #02187E;
+    border-radius: 111px;
+    border: 8px white solid;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    line-height: 18.90px;
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #5CA23A;
+}
+
+
+.header.scrolled {
+    height: 70px; /* Reduce la altura del header */
+    padding: 0 15px;
+    background: #00A0A0; /* Cambia el fondo a un color plano */
+}
+
+.header.scrolled .icon-container,
+.header.scrolled .logo-container,
+.header.scrolled .button-comprar-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header.scrolled .icon {
+    width: 40px; /* Reduce el tamaño del icono */
+}
+
+.header.scrolled .logo {
+    width: 90px; /* Reduce el tamaño del logo un poco más que otros elementos */
+}
+
+.header.scrolled .buy-button {
+    width: 160px; /* Reduce el ancho del botón */
+    height: 40px; /* Reduce la altura del botón */
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    border-width: 6px; /* Reduce el grosor del borde */
+}
+/*-------------------------------- FIN DEL HEADER ------------------------------------*/
+
+
+/* ------------- -----------------SECCION 2 ------------------------------------------*/
 .app-container{
     width: 1280px;
     height: 894px;
@@ -111,10 +205,241 @@
   left: 50px;
 }
 
-/* ------------- FIN SECCION 2 ------------*/
+/* ------------------------------- FIN SECCION 2 -------------------------------------*/
+
+/*-------------------------------- SECCION 3 -----------------------------------------*/
+.numberblocks-section {
+    width: 1280px;
+    height: 1192px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-out; /* Añade una transición suave */
+}
+
+/* Fondo morado */
+.background {
+    position: absolute;
+    width: 1280px;
+    height: 1157px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple-background {
+    width: 1250px;
+    height: 1157px;
+    background-color: #5829BF;
+    border-right: 8px solid white;
+}
+
+.purple-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 40px; 
+    background-color: #fff; 
+    border-bottom-left-radius: 50% 80px;
+    border-bottom-right-radius: 50% 80px;
+}
+
+/* Contenedor del título */
+.title-container {
+    width: 950px;
+    height: 153px;
+    position: absolute;
+    top: 177px;
+    text-align: center;
+}
+
+.title-container h1 {
+    color: white;
+    font-size: 61.14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    line-height: 67.25px;
+    margin: 0;
+}
+
+.italic-text {
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Contenedor del botón */
+.button-container {
+    position: absolute;
+    top: 392px;
+    left: 393px;
+}
+
+.download-button {
+    width: 540px;
+    height: 66px;
+    font-size: 31.14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: #83C252;
+    border-radius: 111px;
+    border: 8px solid white;
+    box-shadow: 4px 5px 0px #02187E;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #76B344;
+}
+
+/* Imagen principal */
+.main-image {
+    width: 1280px;
+    height: 767px;
+    position: absolute;
+    top: 425px;
+    left: 23px;
+}
+/*-------------------------------- FIN DE SECCION 3 -----------------------------------------*/
 
 
-/* ------------- SECCION 7 ------------*/
+/*---------------------------------SECCION 4-------------------------------------------------*/
+/* CONTENEDOR DIVERSION*/
+.container-mas-diversion {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
+   
+  }
+  .left-column {
+    position: sticky;
+    top: 20px;
+    width: 40%; /* Ajusta el ancho de la columna de la imagen */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-column {
+    width: 60%; /* Ajusta el ancho de la columna de texto */
+    padding-left: 20px;
+    margin-top: 300px; /* Ajusta este valor según sea necesario */
+  }
+  .changing-image {
+    max-width: 60%; /* Asegura que la imagen no exceda el ancho de la columna */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(1.05);
+  }
+  .changing-image.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .text-block {
+    margin-bottom: 200px; /* Espacio entre bloques de texto */
+  }
+/*-----------------------------------FIN SECCION 4 ------------------------------------------*/
+
+
+/*-------------------------------- SECCION 5 ------------------------------------------------*/
+.container-numberblock-corona {
+    width: 1280px;
+    height: 1443.83px;
+    position: relative;
+}
+
+.rectangulo-numberblock-corona {
+    width: 1260px;
+    height: 1400px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url("../imagenes/rectangulo25.png")
+
+}
+
+.grupo-numberblock-corona {
+    width: 804px;
+    height: 452px;
+    position: absolute;
+    left: 50px;
+    top: 525.83px;
+}
+
+.imagen-numberblock-corona {
+    width: 804px;
+    height: 452px;
+    position: absolute;
+   
+}
+
+.numberblocks-numero3-con-corona1 {
+    width: 608px;
+    height: 989px;
+    position: absolute;
+    left: 653px;
+    top: 360.83px;
+}
+
+.texto-numberblock-corona {
+    width: 802px;
+    position: absolute;
+    left: 50px;
+    top: 308.83px;
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 56.70px;
+    word-wrap: break-word;
+}
+/*-------------------------------- FIN SECCION 5 ------------------------------------------------*/
+
+
+/*----------------------------------SECCION 6---------------------------------*/
+
+  #section-3d {
+    position: relative;
+    width: 1280px;
+    height: 1030px;
+}
+
+#section-3d .container {
+    position: absolute;
+    top: 214px;
+    left: 102px;
+}
+
+#section-3d .container #title-3d {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 60px;
+    color: #9D2121; /* Rojo */
+    width: 746px;
+  }
+
+#section-3d .container #description-3d {
+    margin-top: 48px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 20px;
+    width: 467px;
+}
+
+/*-----------------------------------FIN SECCION 6 ------------------------------*/
+
+
+/* ---------------------------------- SECCION 7 --------------------------------*/
 
 .section-7 {
     width: 1280px;
@@ -155,5 +480,6 @@
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
-/*-------------- FIN SECCION 7---------*/
+/*------------------------------------------ FIN SECCION 7-----------------------------*/
+
 
