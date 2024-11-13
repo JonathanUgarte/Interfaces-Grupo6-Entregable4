@@ -349,7 +349,7 @@
  .character-5 {
   position: absolute;
   height: 1259px;
-  top: -87px;
+  top: 950px;
   left: 787px;
 }
 
@@ -357,7 +357,7 @@
   position: absolute;
   height: 603px;
   width: 601px;
-  top: 628px;
+  top: 1558px;
   left: 50px;
 }
 
@@ -649,7 +649,8 @@
 
 footer {
     position: relative;
-    height: 595px;
+    width: 1280px;
+    height: 515px;
     background-color: #5E5E5D;
 }
 
