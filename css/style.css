@@ -7,9 +7,15 @@
 
 .number-block-main-container{
     display: flex;
-    width: 1279px;
-    height: 959px;
+    min-height: 500px;
+    width: 1280px;
+    height: 100%;
     background-image: url("../imagenes/ff.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    background-size: cover;
 }
 .arbol-derecha{
     z-index: 2; /* Asegura que el árbol esté por delante del arbusto */
@@ -23,7 +29,6 @@
 .right{
     display: flex;
 }
-
 
   .rock1 {
     left: 150px;
@@ -63,18 +68,3 @@
   .personajes {
     display: flex;
 }
-
-.personaje1 {
-    z-index: 2;
-}
-
-.personaje2{
-   
-}
-
-
-
-
-
-
-
