@@ -97,8 +97,8 @@
 
 #section-hero {
     height: 959px;
-    width: 100%;
-    background-image: url('../static/parallax/hero-background-upscaled.png');
+    width: 1280px;
+    background-image: url('../imagenes/ff.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -518,7 +518,6 @@
     justify-content: center;
     align-items: center;
     background-image:url("../imagenes/rectangulo25.png")
-
 }
 
 .grupo-numberblock-corona {
