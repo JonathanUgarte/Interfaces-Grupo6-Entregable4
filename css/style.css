@@ -1,34 +1,99 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
+/* HEADER*/
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.number-block-main-container{
+.header {
+    width: 100%;
+    max-width: 1280px;
+    height: 103px;
+    background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 88%, rgba(1, 208, 213, 0) 100%);
     display: flex;
-    min-height: 500px;
-    width: 1280px;
-    height: 100%;
-    background-image: url("../imagenes/ff.png");
-    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
-    left: 0;
-    background-repeat: repeat-x;
-    background-size: cover;
-}
-.arbol-derecha{
-    z-index: 2; /* Asegura que el árbol esté por delante del arbusto */
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-.arboles-piedras-1{
-    display: block;
-    flex-direction: column;
+.icon-container, .logo-container, .button-comprar-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: margin 0.3s ease;
 }
 
-.right{
+.icon {
+    width: 50px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.buy-button {
+    width: 200px;
+    height: 50px;
+    background: #83C252;
+    box-shadow: 4px 5px 0px #02187E;
+    border-radius: 111px;
+    border: 8px white solid;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    line-height: 18.90px;
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #5CA23A;
+}
+
+/* Estilos para el header reducido */
+.header.scrolled {
+    height: 70px; /* Reduce la altura del header */
+    padding: 0 15px;
+    background: #00A0A0; /* Cambia el fondo a un color plano */
+}
+
+.header.scrolled .icon-container,
+.header.scrolled .logo-container,
+.header.scrolled .button-comprar-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header.scrolled .icon {
+    width: 40px; /* Reduce el tamaño del icono */
+}
+
+.header.scrolled .logo {
+    width: 90px; /* Reduce el tamaño del logo un poco más que otros elementos */
+}
+
+.header.scrolled .buy-button {
+    width: 160px; /* Reduce el ancho del botón */
+    height: 40px; /* Reduce la altura del botón */
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    border-width: 6px; /* Reduce el grosor del borde */
+}
+
+/* CONTENEDOR DIVERSION*/
+.container-mas-diversion {
     display: flex;
 }
+
 
   .rock1 {
     left: 150px;
@@ -55,16 +120,45 @@
     bottom: 1px;
     z-index: 2;
   }
-  .center {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: column;
+  
+  .text-block {
+    margin-bottom: 200px; /* Espacio entre bloques de texto */
   }
 
-  .titulo{
-    width: 560px;
-    height: 320px;
-  }
-  .personajes {
+/*NUMBER BLOCKS*/
+.numberblocks-section {
+    width: 1303px;
+    height: 1192px;
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform 0.1s ease-out; /* Añade una transición suave */
+    
 }
+
+/* Fondo morado */
+.background {
+    position: absolute;
+    width: 1280px;
+    height: 1157px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personaje1 {
+    z-index: 2;
+}
+
+.personaje2{
+   
+}
+
+
+
+
+
+
+
