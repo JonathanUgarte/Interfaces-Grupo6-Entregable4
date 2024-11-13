@@ -11,7 +11,7 @@ let currentX = 0;
 let currentY = 0;
 
 // Evento para iniciar el arrastre (cuando se presiona el botón del mouse)
-document.addEventListener('mousedown', (event) => {
+document.addEventListener('click', (event) => {
   isDragging = true; // El usuario empieza a hacer clic y arrastrar
 
   // Obtener las posiciones iniciales del mouse
@@ -20,20 +20,17 @@ document.addEventListener('mousedown', (event) => {
 });
 
 // Evento para mover el modelo mientras se arrastra
-document.addEventListener('mousemove', (event) => {
+document.addEventListener('click', (event) => {
   if (isDragging) {
     // Calcular el desplazamiento del mouse
     const deltaX = event.clientX - startX;
     const deltaY = event.clientY - startY;
 
     // Ajustar la rotación del modelo en función del desplazamiento
-    currentX -= deltaX * 0.5;  // Aumentamos la velocidad en el eje X
-    currentY += deltaY * 0.5;  // Aumentamos la velocidad en el eje Y
+    currentX -= deltaX * 0.3;  // Invertir la dirección de la rotación en el eje X
+    currentY += deltaY * 0.3;  // Mantener la rotación normal en el eje Y
 
-    // Limitar el rango del movimiento vertical (evitar que gire más allá de -90 y 90 grados)
-    currentY = Math.max(Math.min(currentY, 90), -90);
-
-    // Aplicar la rotación (ahora el modelo puede girar en ambas direcciones)
+    // Aplicar la rotación (ahora gira en la dirección correcta)
     modelViewer.cameraOrbit = `${currentX}deg ${currentY}deg 0`;
 
     // Actualizar las posiciones del mouse
@@ -43,6 +40,6 @@ document.addEventListener('mousemove', (event) => {
 });
 
 // Evento para detener el arrastre (cuando se suelta el botón del mouse)
-document.addEventListener('mouseup', () => {
+document.addEventListener('click', () => {
   isDragging = false; // El arrastre se detiene cuando se suelta el botón
 });
