@@ -649,6 +649,159 @@
 /*------------------------------------------ FIN SECCION 7-----------------------------*/
 
 /* ====================================================================== */
+/*                                SECTION 8                                   
+/* ====================================================================== */
+
+#section-8 {
+    position: relative;
+    height: 1570px;
+}
+
+#section-8 .container {
+    position: absolute;
+    top: 190px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+}
+
+#section-8 .container #title {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 60px;
+    width: 816px;
+    margin-bottom: 48px;
+}
+
+#section-8 .container .subscribe {
+    height: 100px;
+    width: 780px;
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: row;
+    border: 9px solid #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 4px 5px #02187E;
+    overflow: hidden;
+}
+
+#section-8 .container .subscribe input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+#section-8 .container .subscribe button {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 218px;
+    background-color: #83C252;
+    border-left: 9px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#section-8 .container #terms-of-service {
+    margin-top: 48px;
+    margin-bottom: 25px;
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 20px;
+    width: 578px;
+}
+
+#section-8 .container #terms-of-service a {
+
+    color: #000000;
+}
+
+#section-8 .container #teen-advisory {
+    height: 145px;
+    width: 231px;
+}
+
+#section-8 #background-gradient {
+    position: absolute;
+    height: 1296px;
+    top: 273px;
+}
+
+#section-8 #background-grass {
+    position: absolute;
+    height: 389px;
+    top: 1181px;
+}
+
+#section-8 #cloud-1 {
+    position: absolute;
+    height: 181x;
+    top: 819px;
+    left: -56px;
+    opacity: 50%;
+}
+
+#section-8 #cloud-2 {
+    position: absolute;
+    height: 181px;
+    top: 560px;
+    left: 962px;
+    opacity: 50%;
+}
+
+#section-8 #cloud-3 {
+    position: absolute;
+    height: 124px;
+    top: 517px;
+    left: 794px;
+    opacity: 50%;
+}
+
+#section-8 #character-1 {
+    position: absolute;
+    height: 480px;
+    top: 1048px;
+    left: 65px;
+}
+
+#section-8 #character-2 {
+    position: absolute;
+    height: 509px;
+    top: 1019px;
+    left: 407px;
+}
+
+#section-8 #character-3 {
+    position: absolute;
+    height: 997px;
+    top: 613px;
+    left: 756px;
+}
+
+/* ====================================================================== */
+/*                 FIN               SECTION 8                                   
+/* ====================================================================== */
+
+/* ====================================================================== */
 /*                                FOOTER                                  
 /* ====================================================================== */
 
