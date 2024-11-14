@@ -1,25 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loader = document.getElementById("loader");
-    const content = document.getElementById("content");
-    const redirectButton = document.getElementById("redirectButton");
-    const progressBar = document.querySelector(".progress");
-    const progressText = document.querySelector(".progress-text");
-  
-    let progress = 0;
-  
-    const interval = setInterval(() => {
-      progress += 1;
-      progressBar.style.width = `${progress}%`;
-      progressText.textContent = `${progress}%`;
-  
-      if (progress >= 100) {
-        clearInterval(interval);
-        loader.classList.add("hidden");
-        content.classList.remove("hidden");
+  const blocks = document.querySelectorAll(".progress-bar .block");
+  const loadingText = document.querySelector(".loading-text");
+  let progress = 0;
+
+  // Separar las letras de "Cargando..." en spans para animarlas individualmente
+  const text = "Cargando...";
+  loadingText.innerHTML = text.split("").map((letter, index) => {
+      return `<span style="animation-delay: ${index * 0.1}s">${letter}</span>`;
+  }).join("");
+
+  // Función para simular el progreso de carga
+  function updateProgress() {
+      if (progress < blocks.length) {
+          blocks[progress].classList.add("active");
+          const numberSpan = blocks[progress].querySelector(".number");
+          numberSpan.style.animation = `showNumber 0.8s forwards`; // Mostrar el número al activarse el bloque
+          progress++;
+          setTimeout(updateProgress, 700); // Ajusta el tiempo aquí para hacer la animación más lenta
+      } else {
+          // Cuando se completa la palabra, aplicar la animación de caída
+          setTimeout(() => {
+              loadingText.style.animation = "drop 0.8s forwards";
+              
+              // Redirigir a index.html después de la animación de caída
+              setTimeout(() => {
+                  window.location.href = "index.html";
+              }, 800); // Tiempo suficiente para que termine la animación de caída
+          }, 700);
       }
-    }, 50); // Simula 5 segundos de carga
-  
-    redirectButton.addEventListener("click", () => {
-      window.location.href = "https://www.example.com"; // Cambia a la URL deseada
-    });
-  });
+  }
+
+  // Iniciar la carga simulada
+  updateProgress();
+});
