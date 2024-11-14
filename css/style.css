@@ -554,6 +554,11 @@
     line-height: 56.70px;
     word-wrap: break-word;
 }
+
+.video {
+    border: 20px , solid, white ;
+    border-radius: 45px;
+}
 /*-------------------------------- FIN SECCION 5 ------------------------------------------------*/
 
 
