@@ -95,6 +95,19 @@
 /*                             SECTION 1 HERO                                  
 /* ====================================================================== */
 
+/* EFECTO PARALLAX SECCION 1*/
+  .layer {
+    position: absolute;
+    transition: transform 0.3s ease-out; /* Para la animación de entrada */
+    opacity: 0; /* Para la animación de entrada */
+  }
+  
+  .layer.show {
+    opacity: 1;
+    transition: opacity 1s ease-in; /* Ajuste gradual */
+  }
+/* FIN EFECTO PARALLAX SECCION 1*/
+
 #section-hero {
     height: 959px;
     width: 1280px;
@@ -804,6 +817,48 @@
 /* ====================================================================== */
 /*                                FOOTER                                  
 /* ====================================================================== */
+
+/* SPRITESHEET */
+
+/* Estilo general para el contenedor /imagenes/spinning-coin.png */
+.coin {
+    width: 100px; /* Ajusta al ancho de un frame individual de la moneda */
+    height: 100px; /* Ajusta al alto de un frame individual de la moneda */
+    background-image: url('/imagenes/spinning-coin.png'); /* Ruta a tu spritesheet */
+    background-repeat: no-repeat;
+    background-size: 600%; /* Escala el fondo para mostrar solo un frame a la vez (si tienes 6 frames) */
+    animation: spinCoin 1s steps(6) infinite;
+}
+
+@keyframes spinCoin {
+    from {
+        background-position: 0px; /* Empieza en el primer frame */
+    }
+    to {
+        background-position: -600px; /* Ajusta este valor dependiendo del ancho total de la imagen */
+    }
+}
+
+.number-sprite {
+    width: 50px; /* Ancho de un solo número */
+    height: 50px; /* Alto de un solo número */
+    background-image: url('/imagenes/numbers-spritesheet.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat;
+    background-size: 150px auto; /* Ajuste del tamaño total (3 frames de 50px cada uno) */
+    animation: cycleNumbers 1s steps(3) infinite; /* 3 frames en el spritesheet */
+    animation-fill-mode: forwards;
+}
+
+@keyframes cycleNumbers {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -150px; /* Desplaza hasta el último número */
+    }
+}
+
+/* FIN SPRITESHET */
 
 footer {
     position: relative;
