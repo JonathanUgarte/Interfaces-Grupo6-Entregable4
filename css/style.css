@@ -341,7 +341,14 @@
   gap: 30px;
 }
 
-.container-texto{
+.txt-imgs {
+    position: relative; /* Para que el desplazamiento sea relativo al flujo actual */
+    top: 150px;
+    z-index: 1; /* Asegúrate de que el z-index sea menor que el de los personajes */
+  }
+  
+
+.container-texto{   
   width: 340px;
   height: 600px;
   gap: 30px;
@@ -364,14 +371,16 @@
   height: 1259px;
   top: 950px;
   left: 787px;
+  z-index: 10; /* Asegúrate de que esté por delante */
 }
 
  .character-4 {
   position: absolute;
-  height: 603px;
-  width: 601px;
-  top: 1558px;
+  height: 503px;
+  width: 501px;
+  top: 1530px;
   left: 50px;
+  z-index: 10; /* Asegúrate de que esté por delante */
 }
 
 /* ------------------------------- FIN SECCION 2 -------------------------------------*/
