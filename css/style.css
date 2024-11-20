@@ -1,5 +1,4 @@
 
-/*--------------------------------HEADER ------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -223,19 +222,6 @@
 /* ====================================================================== */
 /*                             SECTION 1 HERO                                  
 /* ====================================================================== */
-
-/* EFECTO PARALLAX SECCION 1*/
-  .layer {
-    position: absolute;
-    transition: transform 0.3s ease-out; /* Para la animación de entrada */
-    opacity: 0; /* Para la animación de entrada */
-  }
-  
-  .layer.show {
-    opacity: 1;
-    transition: opacity 1s ease-in; /* Ajuste gradual */
-  }
-/* FIN EFECTO PARALLAX SECCION 1*/
 
 #section-hero {
     height: 959px;
@@ -471,14 +457,6 @@
   gap: 30px;
 }
 
-.txt-imgs {
-    position: relative; /* Para que el desplazamiento sea relativo al flujo actual */
-    top: 150px;
-    z-index: 1; /* Asegúrate de que el z-index sea menor que el de los personajes */
-  }
-  
-
- 
 .container-texto {
   width: 340px;
   height: 600px;
@@ -523,16 +501,14 @@
   height: 1259px;
   top: 950px;
   left: 787px;
-  z-index: 10; /* Asegúrate de que esté por delante */
 }
 
  .character-4 {
   position: absolute;
-  height: 503px;
-  width: 501px;
-  top: 1530px;
+  height: 603px;
+  width: 601px;
+  top: 1558px;
   left: 50px;
-  z-index: 10; /* Asegúrate de que esté por delante */
 }
 
 
@@ -787,8 +763,8 @@
     width: 1280px;
     height: 684px;
     position: relative;
-    background: linear-gradient(to right, purple, red, orange, pink, rgb(11, 241, 23), gray, darkblue, white);
-    
+    background: linear-gradient(to right, red, purple, orange, pink, green, gray, darkblue, white);
+
 }
 
 .section-7 .container {
@@ -825,203 +801,8 @@
 /*------------------------------------------ FIN SECCION 7-----------------------------*/
 
 /* ====================================================================== */
-/*                                SECTION 8                                   
-/* ====================================================================== */
-
-#section-8 {
-    position: relative;
-    height: 1570px;
-}
-
-#section-8 .container {
-    position: absolute;
-    top: 190px;
-    left: 100px;
-    display: flex;
-    flex-direction: column;
-    z-index: 30;
-}
-
-#section-8 .container #title {
-    font-family: "Lato", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 94.5%;
-    font-size: 60px;
-    width: 816px;
-    margin-bottom: 48px;
-}
-
-#section-8 .container .subscribe {
-    height: 100px;
-    width: 780px;
-    background-color: #ECECEC;
-    display: flex;
-    flex-direction: row;
-    border: 9px solid #FFFFFF;
-    border-radius: 50px;
-    box-shadow: 4px 5px #02187E;
-    overflow: hidden;
-}
-
-#section-8 .container .subscribe input {
-    width: 100%;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 94.5%;
-    font-size: 20px;
-    padding-left: 45px;
-    padding-right: 45px;
-}
-
-#section-8 .container .subscribe button {
-    border: none;
-    background: transparent;
-    outline: none;
-    width: 218px;
-    background-color: #83C252;
-    border-left: 9px solid #FFFFFF;
-    color: #FFFFFF;
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    line-height: 94.5%;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#section-8 .container #terms-of-service {
-    margin-top: 48px;
-    margin-bottom: 25px;
-    color: #000000;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 94.5%;
-    font-size: 20px;
-    width: 578px;
-}
-
-#section-8 .container #terms-of-service a {
-
-    color: #000000;
-}
-
-#section-8 .container #teen-advisory {
-    height: 145px;
-    width: 231px;
-}
-
-#section-8 #background-gradient {
-    position: absolute;
-    height: 1296px;
-    top: 273px;
-}
-
-#section-8 #background-grass {
-    position: absolute;
-    height: 389px;
-    top: 1181px;
-}
-
-#section-8 #cloud-1 {
-    position: absolute;
-    height: 181x;
-    top: 819px;
-    left: -56px;
-    opacity: 50%;
-}
-
-#section-8 #cloud-2 {
-    position: absolute;
-    height: 181px;
-    top: 560px;
-    left: 962px;
-    opacity: 50%;
-}
-
-#section-8 #cloud-3 {
-    position: absolute;
-    height: 124px;
-    top: 517px;
-    left: 794px;
-    opacity: 50%;
-}
-
-#section-8 #character-1 {
-    position: absolute;
-    height: 480px;
-    top: 1048px;
-    left: 65px;
-}
-
-#section-8 #character-2 {
-    position: absolute;
-    height: 509px;
-    top: 1019px;
-    left: 407px;
-}
-
-#section-8 #character-3 {
-    position: absolute;
-    height: 997px;
-    top: 613px;
-    left: 756px;
-}
-
-/* ====================================================================== */
-/*                 FIN               SECTION 8                                   
-/* ====================================================================== */
-
-/* ====================================================================== */
 /*                                FOOTER                                  
 /* ====================================================================== */
-
-/* SPRITESHEET */
-
-/* Estilo general para el contenedor /imagenes/spinning-coin.png */
-.coin {
-    width: 100px; /* Ajusta al ancho de un frame individual de la moneda */
-    height: 100px; /* Ajusta al alto de un frame individual de la moneda */
-    background-image: url('/imagenes/spinning-coin.png'); /* Ruta a tu spritesheet */
-    background-repeat: no-repeat;
-    background-size: 600%; /* Escala el fondo para mostrar solo un frame a la vez (si tienes 6 frames) */
-    animation: spinCoin 1s steps(6) infinite;
-}
-
-@keyframes spinCoin {
-    from {
-        background-position: 0px; /* Empieza en el primer frame */
-    }
-    to {
-        background-position: -600px; /* Ajusta este valor dependiendo del ancho total de la imagen */
-    }
-}
-
-.number-sprite {
-    width: 50px; /* Ancho de un solo número */
-    height: 50px; /* Alto de un solo número */
-    background-image: url('/imagenes/numbers-spritesheet.png'); /* Ruta a tu imagen */
-    background-repeat: no-repeat;
-    background-size: 150px auto; /* Ajuste del tamaño total (3 frames de 50px cada uno) */
-    animation: cycleNumbers 1s steps(3) infinite; /* 3 frames en el spritesheet */
-    animation-fill-mode: forwards;
-}
-
-@keyframes cycleNumbers {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -150px; /* Desplaza hasta el último número */
-    }
-}
-
-/* FIN SPRITESHET */
 
 footer {
     position: relative;
@@ -1065,5 +846,6 @@ footer .container #social {
 /* ====================================================================== */
 /*                     FIN           FOOTER                                  
 /* ====================================================================== */
+
 
 
