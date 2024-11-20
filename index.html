@@ -10,7 +10,11 @@
   <!--------------------------------HEADER ------------------------------------>
   <header class="header" id="header-animado">
     <div class="icon-container">
-        <img src="./imagenes/Group 1.png" alt="Menu Icon" class="icon">
+      <div id="btn-menu" class="btn-menu">
+        <div class="line-btn-menu line1"></div>
+        <div class="line-btn-menu line2"></div>
+        <div class="line-btn-menu line3"></div>
+    </div>
     </div>
     <div class="logo-container">
         <img src="./imagenes/logo 1.png" alt="Numberblocks Logo" class="logo" id="logo">
@@ -19,6 +23,15 @@
         <button class="buy-button">COMPRAR</button>
     </div>
 </header>
+ 
+<nav id="menu" class="menu">
+  <ul class="opciones">
+      <li><a  href="#">Perfil</a></li>
+      <li><a  href="#">Tienda</a></li>
+      <li><a href="#">Configuracion</a></li>
+      <li><a href="#">Sobre Nosotros</a></li>
+  </ul>
+</nav>
   <!-------------------------------- FIN DEL HEADER ------------------------------------>
 
   <!--                 SECTION 1                  -->
@@ -98,6 +111,36 @@
               en su mejor guía! Se su mejor amigo y diviértete con él.</p>
          </div>
       </div>
+  <div class="app-container2">
+    <div class="container-texto fade-in">
+      <img src="./imagenes/image 13.png" alt="tablero suma">
+      <p>
+          Los niños descubrirán lo divertido que puede 
+          ser aprender matemáticas. A través de personajes
+          animados y desafíos interactivos, podrán sumar,
+          restar y entender conceptos básicos de manera fácil
+          y entretenida. ¡Cada número cobra vida para hacer que
+          las matemáticas sean emocionantes!
+      </p>
+    </div>
+    <div class="container-texto fade-in">
+      <img src="./imagenes/image 8.png" alt="panel juego">
+      <p>Con NumberBlocks, los niños encontrarán emocionantes 
+          retos en cada nivel, diseñados para hacer que el aprendizaje 
+          sea tan divertido como un juego. ¡Cada desafío es una nueva
+          aventura matemática! Diviértete e invita a tus amigos,
+          desafíalos y gana premios.
+      </p>
+    </div>
+    <div class="container-texto fade-in">
+      <img src="./imagenes/image 24.png" alt="panel uno">
+      <p>Entrena a UNO y Comparte lo que Aprendes!
+          En NumberBlocks, deberás enseñar a UNO cada 
+          lección que aprendas, ayudándolo a crecer y
+          superar nuevos desafíos matemáticos. ¡Conviértete
+          en su mejor guía! Se su mejor amigo y diviértete con él.
+      </p>
+    </div>
   </div>
   
 
@@ -302,6 +345,8 @@
 </footer>
 <!--           FIN       FOOTER                    -->
     <script src="js/scroll.js"></script>
+    <script src="./js/menuDesplegable.js"></script>
+    <script src="./js/apariciondeCards.js"></script>
     <script src="./js/section1.js"></script>
     <script src="./js/carruselApp3anios.js"></script>
     <script src="./js/animado3d.js"></script>
