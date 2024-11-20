@@ -611,8 +611,8 @@
     width: 1280px;
     height: 684px;
     position: relative;
-    background: linear-gradient(to right, red, purple, orange, pink, green, gray, darkblue, white);
-
+    background: linear-gradient(to right, purple, red, orange, pink, rgb(11, 241, 23), gray, darkblue, white);
+    
 }
 
 .section-7 .container {

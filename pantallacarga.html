@@ -7,23 +7,47 @@
     <link rel="stylesheet" href="./css/pantallacarga.css">
 </head>
 <body>
-    <div id="loader">
-        <div class="background">
-          <div class="runner-container">
-            <div class="runner">🏃‍♂️</div>
-            <div class="runner">🏃‍♀️</div>
-            <div class="runner">🏃</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress"></div>
-          </div>
-          <span class="progress-text">0%</span>
+  <div id="loading-screen">
+    <h1 class="loading-text">Cargando...</h1>
+    <div class="left-gif">
+        <img src="./imagenes/giphy1.webp" alt="Left GIF">
+    </div>
+    <div class="progress-bar">
+        <div class="block">
+            <span class="number">10%</span>
         </div>
-      </div>
-    
-      <div id="content" class="hidden">
-        <h1>¡Carga completa!</h1>
-        <button id="redirectButton">Ir a la página principal</button>
-      </div>
+        <div class="block">
+            <span class="number">20%</span>
+        </div>
+        <div class="block">
+            <span class="number">30%</span>
+        </div>
+        <div class="block">
+            <span class="number">40%</span>
+        </div>
+        <div class="block">
+            <span class="number">50%</span>
+        </div>
+        <div class="block">
+            <span class="number">60%</span>
+        </div>
+        <div class="block">
+            <span class="number">70%</span>
+        </div>
+        <div class="block">
+            <span class="number">80%</span>
+        </div>
+        <div class="block">
+            <span class="number">90%</span>
+        </div>
+        <div class="block">
+            <span class="number">100%</span>
+        </div>
+    </div>
+    <div class="right-gif">
+        <img src="./imagenes/giphy2.webp" alt="Right GIF">
+    </div>
+</div>
+<script src="./js/pantallacarga.js"></script>
 </body>
 </html>
