@@ -14,10 +14,17 @@ body, html {
   text-align: center;
 }
 
-.left-gif, .right-gif {
+.left-gif {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  
+}
+.right-gif{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 
 .left-gif {
@@ -83,11 +90,20 @@ body, html {
 .block .number {
   opacity: 0;
   animation: showNumber 0.8s forwards;
+  animation: fadeOut 0.5s ease forwards;
 }
 
 @keyframes showNumber {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .block:nth-child(1) { color: #ff6b6b; }
@@ -100,6 +116,8 @@ body, html {
 .block:nth-child(8) { color: #f368e0; }
 .block:nth-child(9) { color: #54a0ff; }
 .block:nth-child(10) { color: #00d2d3; }
+
+
 
 @keyframes fill {
   from { background-position: top; }

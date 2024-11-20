@@ -27,8 +27,8 @@ document.addEventListener('click', (event) => {
     const deltaY = event.clientY - startY;
 
     // Ajustar la rotación del modelo en función del desplazamiento
-    currentX -= deltaX * 0.3;  // Invertir la dirección de la rotación en el eje X
-    currentY += deltaY * 0.3;  // Mantener la rotación normal en el eje Y
+    currentX -= deltaX * 0.5;  // Invertir la dirección de la rotación en el eje X
+    currentY += deltaY * 0.5;  // Mantener la rotación normal en el eje Y
 
     // Aplicar la rotación (ahora gira en la dirección correcta)
     modelViewer.cameraOrbit = `${currentX}deg ${currentY}deg 0`;
