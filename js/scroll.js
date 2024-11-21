@@ -1,12 +1,12 @@
 
 // EFECTO PARALLAX CON ENTRADA A LA PAGINA
 document.addEventListener("scroll", () => {
-  const layers = document.querySelectorAll("#section-hero .layer");
+  const layers = document.querySelectorAll(".layer");
   const scrollTop = window.scrollY;
   
   layers.forEach(layer => {
     const speed = layer.getAttribute("data-speed");
-    const yPos = -(scrollTop * speed);
+    const yPos = -(scrollTop * speed * 3);
     layer.style.transform = `translateY(${yPos}px)`;
     if (scrollTop > 10) layer.classList.add("show"); // Activa la visibilidad
   });
@@ -26,9 +26,9 @@ function parallaxEffect() {
 
   // Velocidades de los personajes
   if(scrollPosition < 1500){
-      character4.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+      character4.style.transform = `translateY(${scrollPosition * 0.3}px)`;
       character5.style.transform = `translateY(${scrollPosition * 0.1}px)`;
-      textElements.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+      textElements.style.transform = `translateY(${scrollPosition * 0.2}px)`;
   }
 }
 

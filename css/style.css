@@ -5,21 +5,7 @@
     box-sizing: border-box;
 }
 
-.header {
-    width: 100%;
-    max-width: 1280px;
-    height: 103px;
-    background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 88%, rgba(1, 208, 213, 0) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
+
 
 .icon-container, .logo-container, .button-comprar-container {
     display: flex;
@@ -35,30 +21,80 @@
     transition: width 0.3s ease;
 }
 
+
 .logo {
-    width: 150px;
-    height: auto;
-    transition: width 0.3s ease;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 320px;
+    object-fit: contain; /* Mantener las proporciones del logo */
+    transition: all 0.5s ease;
+  }
+  
+  .scrolled .logo {
+    position: static;
+    width: 200px; /* Ajusta el ancho según el encabezado */
+    height: auto; /* El alto se ajustará automáticamente */
+    object-fit: contain;
+  }
+  .logo-intermediate {
+    width: 300px;
+    height: 170px;
+  }
+/* Header styles */
+.header {
+  width: 100%;
+  max-width: 1280px;
+  height: 103px;
+  background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 88%, rgba(1, 208, 213, 0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
+
+
+
+.button-comprar-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: margin 0.3s ease;
+}
 .buy-button {
     width: 200px;
     height: 50px;
-    background: #83C252;
-    box-shadow: 4px 5px 0px #02187E;
-    border-radius: 111px;
+    background: #83C252; 
+    box-shadow: 4px 5px 0px #02187E; 
+    border-radius: 111px; 
     border: 8px white solid;
     color: white;
     font-size: 20px;
     font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 900;
     line-height: 18.90px;
-    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .buy-button:hover {
-    background-color: #5CA23A;
+    transform: scale(1.1); 
+    background: #54a01a;
 }
+
+.buy-button:active {
+    transform: scale(0.95); 
+}
+
 
 .header.scrolled {
     height: 70px; /* Reduce la altura del header */
@@ -127,58 +163,81 @@
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    color:white;
-    
+    color: white;
 }
+
 .menu li:hover {
     background-color: #658697;
 }
+
 .opciones {
     display: flex;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    padding-top: 100px;
 }
 
 .menu li {
-    border-radius: 20px;
-    opacity: 0;
-    transform: translateX(-20px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    opacity: 0; 
+    transform: translateX(-50px);
 }
 
-
-
-
-.btn-menu.active {
-
-    .line-btn-menu {
-        box-shadow: none;
-        width: 40px;
-    }
-
-    .line1 {
-        transform: rotate(-35deg) translateY(6px) translateX(-10px);
-        transition: 1s;
-    }
-
-    .line2 {
-        visibility: hidden;
-        transition: 0.2s;
-    }
-
-    .line3 {
-        transform: rotate(35deg) translateY(-6px) translateX(-10px);
-        transition: 1s;
-    }
-}
-
-
-
+/* Animación personalizada */
 @keyframes menu-item-entry {
-    to {margin-left: 0;}
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilo cuando el menú está activo */
+.menu.active {
+    left: 0px;
+    transition: 1s;
 }
 
 
+.menu.active #menu-item-1 {
+    animation: menu-item-entry 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.menu.active #menu-item-2 {
+    animation: menu-item-entry 0.5s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.menu.active #menu-item-3 {
+    animation: menu-item-entry 0.5s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.menu.active #menu-item-4 {
+    animation: menu-item-entry 0.5s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.menu.active #menu-item-5 {
+    animation: menu-item-entry 0.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Estilo de los botones (líneas del botón del menú) */
 .line-btn-menu {
     height: 12px;
     width: 40px;
@@ -187,25 +246,32 @@
     box-shadow: 4px 5px #02187E;
     transition: 1s;
     z-index: 100;
-    border:4px ,solid, white;
+    border: 4px solid white;
 }
 
 .line2, .line3 {
     margin-top: -1px;
 }
 
-.opciones{
-    padding-top: 100px;
+
+.btn-menu.active .line-btn-menu {
+    box-shadow: none;
+    width: 40px;
 }
-@keyframes menu-item-entry {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+
+.btn-menu.active .line1 {
+    transform: rotate(-35deg) translateY(6px) translateX(-10px);
+    transition: 1s;
+}
+
+.btn-menu.active .line2 {
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.btn-menu.active .line3 {
+    transform: rotate(35deg) translateY(-6px) translateX(-10px);
+    transition: 1s;
 }
 
 
@@ -976,43 +1042,132 @@
 /* SPRITESHEET */
 
 /* Estilo general para el contenedor /imagenes/spinning-coin.png */
-.coin {
+.spritesheet{
+    max-width: 1280px;
+    display: flex;
+    gap: 80px;
+    background-color: #141414;
+}
+.spritesheet1 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spinning-coin.png'); 
+    background-image: url('/imagenes/spritesheet1.png'); 
     background-repeat: no-repeat;
-    background-size: 600%; 
-    animation: spinCoin 1s steps(6) infinite;
+    background-size: 400%; 
+    animation: spritesheet1 1s steps(4) infinite;
 }
 
-@keyframes spinCoin {
+@keyframes spritesheet1 {
     from {
         background-position: 0px; 
     }
     to {
-        background-position: -600px; 
+        background-position: -400px; 
     }
 }
-
-.number-sprite {
-    width: 50px; 
-    height: 50px; 
-    background-image: url('/imagenes/numbers-spritesheet.png'); 
+.spritesheet2 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritesheet2.png'); 
     background-repeat: no-repeat;
-    background-size: 150px auto; 
-    animation: cycleNumbers 1s steps(3) infinite; 
-    animation-fill-mode: forwards;
+    background-size: 400%; 
+    animation: spritesheet2 1s steps(4) infinite;
 }
 
-@keyframes cycleNumbers {
+@keyframes spritesheet2 {
     from {
-        background-position: 0px;
+        background-position: 0px; 
     }
     to {
-        background-position: -150px; 
+        background-position: -400px; 
     }
 }
+.spritesheet3 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritsheet3.png'); 
+    background-repeat: no-repeat;
+    background-size: 400%; 
+    animation: spritesheet3 1s steps(4) infinite;
+}
 
+@keyframes spritesheet3 {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -400px; 
+    }
+}
+.spritesheet4 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritesheet4.png'); 
+    background-repeat: no-repeat;
+    background-size: 400%; 
+    animation: spritesheet4 1s steps(4) infinite;
+}
+
+@keyframes spritesheet4 {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -400px; 
+    }
+    
+}
+.spritesheet5 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritesheet5.png'); 
+    background-repeat: no-repeat;
+    background-size: 400%; 
+    animation: spritesheet5 1s steps(4) infinite;
+}
+
+@keyframes spritesheet5 {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -400px; 
+    }
+}
+.spritesheet6 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritesheet6.png'); 
+    background-repeat: no-repeat;
+    background-size: 400%; 
+    animation: spritesheet6 1s steps(4) infinite;
+}
+
+@keyframes spritesheet6 {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -400px; 
+    }
+}
+.spritesheet7 {
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/imagenes/spritesheet7.png'); 
+    background-repeat: no-repeat;
+    background-size: 400%; 
+    animation: spritesheet7 1s steps(4) infinite;
+}
+
+@keyframes spritesheet7 {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -400px; 
+    }
+}
 /* FIN SPRITESHET */
 
 /* ====================================================================== */
