@@ -6,7 +6,7 @@ document.addEventListener("scroll", () => {
   
   layers.forEach(layer => {
     const speed = layer.getAttribute("data-speed");
-    const yPos = -(scrollTop * speed);
+    const yPos = -(scrollTop * speed*3);
     layer.style.transform = `translateY(${yPos}px)`;
     if (scrollTop > 10) layer.classList.add("show"); // Activa la visibilidad
   });
