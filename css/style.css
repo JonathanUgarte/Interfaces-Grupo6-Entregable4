@@ -147,8 +147,6 @@
 }
 
 
-
-
 .btn-menu.active {
 
     .line-btn-menu {
@@ -197,17 +195,6 @@
 .opciones{
     padding-top: 100px;
 }
-@keyframes menu-item-entry {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 
 /* ====================================================================== */
 /*                             SECTION 1 HERO                                  
