@@ -1,26 +1,28 @@
-// Selecciona todos los bloques de texto en la columna derecha
+// Selecciona todos los bloques de texto y la imagen cambiante
 const textBlocks = document.querySelectorAll('.text-block');
 const imageElement = document.querySelector('.changing-image');
 
 let currentImageSrc = ''; // Mantiene el seguimiento de la imagen actual
 
-// Opciones del observer: umbral de 0.5 significa que el bloque debe estar al 50% visible
+// Opciones del IntersectionObserver
 const observerOptions = {
-  root: null, // Observa en la ventana actual
-  threshold: 0.5 // Ajusta según prefieras cuánto del bloque debe ser visible para activar el cambio
+  root: null, // Observa en el viewport
+  threshold: 0.5 // El 50% del bloque debe ser visible
 };
 
-// Crea el observer
+// Crea el IntersectionObserver
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
+    const textBlock = entry.target;
+
     if (entry.isIntersecting) {
-      const newImageSrc = entry.target.getAttribute('data-image');
-      
-      // Cambia la imagen solo si es diferente de la actual
+      // --- Comportamiento de la imagen ---
+      const newImageSrc = textBlock.getAttribute('data-image');
+
       if (newImageSrc !== currentImageSrc) {
         currentImageSrc = newImageSrc;
 
-        // Aplica la transición de opacidad para que el cambio sea suave
+        // Transición suave para la imagen
         imageElement.style.opacity = 0;
 
         setTimeout(() => {
@@ -28,6 +30,12 @@ const observer = new IntersectionObserver((entries) => {
           imageElement.style.opacity = 1;
         }, 300); // 300 ms de transición
       }
+
+      // --- Comportamiento del texto ---
+      textBlock.classList.add('scaled'); // Agrega la clase para animación
+    } else {
+      // Elimina la clase si el bloque sale del viewport
+      textBlock.classList.remove('scaled');
     }
   });
 }, observerOptions);
