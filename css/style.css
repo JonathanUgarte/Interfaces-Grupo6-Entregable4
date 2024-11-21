@@ -4,7 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
 
 
 .icon-container, .logo-container, .button-comprar-container {
@@ -449,6 +453,7 @@
 
 
 /* ------------- -----------------SECCION 2 ------------------------------------------*/
+
 .app-container{
     width: 1280px;
     height: 894px;
@@ -515,7 +520,7 @@
 }
 
 .app-container2 {
-  margin-top: 240px;
+  margin-top: 260px;
   width: 1280px;
   height: 700px;
   background: white;
@@ -1051,7 +1056,7 @@
 .spritesheet1 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet1.png'); 
+    background-image: url('../imagenes/spritesheet1.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet1 1s steps(4) infinite;
@@ -1068,7 +1073,7 @@
 .spritesheet2 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet2.png'); 
+    background-image: url('../imagenes/spritesheet2.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet2 1s steps(4) infinite;
@@ -1085,7 +1090,7 @@
 .spritesheet3 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritsheet3.png'); 
+    background-image: url('../imagenes/spritsheet3.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet3 1s steps(4) infinite;
@@ -1102,7 +1107,7 @@
 .spritesheet4 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet4.png'); 
+    background-image: url('../imagenes/spritesheet4.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet4 1s steps(4) infinite;
@@ -1120,7 +1125,7 @@
 .spritesheet5 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet5.png'); 
+    background-image: url('../imagenes/spritesheet5.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet5 1s steps(4) infinite;
@@ -1137,7 +1142,7 @@
 .spritesheet6 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet6.png'); 
+    background-image: url('../imagenes/spritesheet6.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet6 1s steps(4) infinite;
@@ -1154,7 +1159,7 @@
 .spritesheet7 {
     width: 100px; 
     height: 100px; 
-    background-image: url('/imagenes/spritesheet7.png'); 
+    background-image: url('../imagenes/spritesheet7.png'); 
     background-repeat: no-repeat;
     background-size: 400%; 
     animation: spritesheet7 1s steps(4) infinite;
